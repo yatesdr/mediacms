@@ -207,6 +207,10 @@ def embed_media(request):
     if not media:
         return HttpResponseRedirect("/")
 
+    if (GLOBAL_LOGIN_REQUIRED and GLOBAL_LOGIN_ALLOW_EMBED_DOMAINS):
+        if request.META.REMOTE_HOST not in GLOBAL_LOGIN_ALLOW_EMBED_DOMAINS:
+            return HttpResponseRedirect("/")
+    
     context = {}
     context["media"] = friendly_token
     return render(request, "cms/embed.html", context)
