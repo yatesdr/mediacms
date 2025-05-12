@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #### Single-command install:
-### sudo su -c "bash <(wget -qO- https://github.com/mediacms-io/mediacms/raw/refs/heads/main/easy-install.sh)" root
+### sudo su -c "bash <(wget -qO- https://github.com/yatesdr/mediacms/raw/refs/heads/easy-install-live/easy-install.sh)" root
 
 echo "MediaCMS Easy Installation";
 
@@ -68,7 +68,7 @@ virtualenv . --python=python3
 source  /home/mediacms.io/bin/activate
 
 echo "Cloning latest into mediacms"
-git clone https://github.com/mediacms-io/mediacms
+git clone https://github.com/yatesdr/mediacms --branch easy-install-live
 cd mediacms
 
 ## Ubuntu 24 specific dependencies
