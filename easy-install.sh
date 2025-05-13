@@ -50,7 +50,7 @@ if [[ $osVersion == *"Ubuntu 20"* ]]; then
     curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
     echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
     apt update
-    apt install postgresql-13 postgresql-client-13
+    apt install -y postgresql-13 postgresql-client-13
     
     echo 'Installing other dependencies....'
     apt-get install redis-server pkg-config libxmlsec1-dev nginx git gcc vim unzip imagemagick certbot wget xz-utils -y
