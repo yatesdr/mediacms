@@ -1,7 +1,11 @@
 #!/bin/bash
 
-#### Single-command install:
+#### Single-command install (Ubuntu 20/22/24):
 ### sudo su -c "bash <(wget -qO- https://github.com/yatesdr/mediacms/raw/refs/heads/easy-install-live/easy-install.sh)" root
+
+#### Single-command install (Debian 11/12/13):
+### su -c "bash <(wget -qO- https://github.com/yatesdr/mediacms/raw/refs/heads/easy-install-live/easy-install.sh)" root
+
 
 echo "MediaCMS Easy Installation";
 
