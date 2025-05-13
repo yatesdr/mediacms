@@ -31,7 +31,7 @@ if [[ $osVersion == *"Ubuntu 20"* ]] || [[ $osVersion == *"bullseye"* ]]; then
     
     ### Ubuntu 20 requires Python 3.10 upgrade to work with Django 5.1.
     echo 'Upgrading to Python 3.10...   This may take a while.'
-    sudo apt-get install -y build-essential gdb lcov pkg-config \
+    apt-get install -y build-essential gdb lcov pkg-config \
       libbz2-dev libffi-dev libgdbm-dev libgdbm-compat-dev liblzma-dev \
       libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev \
       lzma lzma-dev tk-dev uuid-dev zlib1g-dev
@@ -47,9 +47,9 @@ if [[ $osVersion == *"Ubuntu 20"* ]] || [[ $osVersion == *"bullseye"* ]]; then
 
     # Install Postgresql 13 repos, required for Django 5.x
     echo "Installing PostgreSQL 13..."
-    sudo apt install curl gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates
-    curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+    apt install curl gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates
+    curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc| gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | tee  /etc/apt/sources.list.d/pgdg.list
     apt update
     apt install -y postgresql-13 postgresql-client-13
     
