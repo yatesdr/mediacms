@@ -57,7 +57,7 @@ if [[ $osVersion == *"Ubuntu 20"* ]]; then
 
 elif [[ $osVersion == *"Ubuntu 22"* ]]; then
     echo 'Ubuntu 22 detected - system update and dependency installation, this will take a few minutes'
-    apt-get update && apt-get -y upgrade && apt-get install python3-venv python3-dev virtualenv redis-server postgresql nginx git gcc vim unzip imagemagick python3-certbot-nginx certbot wget xz-utils -y
+    apt-get update && apt-get -y upgrade && apt-get install python3-venv python3-dev libxmlsec1-dev pkg-config virtualenv redis-server postgresql nginx git gcc vim unzip imagemagick python3-certbot-nginx certbot wget xz-utils -y
 
 elif [[ $osVersion==*"Ubuntu 24"* ]]; then
     echo 'Ubuntu 24 detected - system update and installing Ubuntu 24 dependencies - this may take a few minutes'
