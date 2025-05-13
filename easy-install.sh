@@ -107,7 +107,7 @@ cd mediacms
 if [[ $osVersion == *"Ubuntu 24"* ]]; then
     pip install --no-binary lxml lxml==5.4.0
     pip install --no-binary xmlsec xmlsec==1.3.15
-    pip install -r requirements-ubuntu-24.txt
+    pip install -r requirements.txt
 else
     pip install --no-binary lxml lxml==4.9.2
     pip install --no-binary xmlsec xmlsec==1.3.13
