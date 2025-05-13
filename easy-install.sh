@@ -22,7 +22,7 @@ It is expected to run on a new system **with no running instances of any these s
     esac
 done
 
-apt install lsb-release lsb -y
+apt install lsb lsb-release -y
 
 osVersion=$(lsb_release -d)
 if [[ $osVersion == *"Ubuntu 20"* ]] || [[ $osVersion == *"bullseye"* ]]; then
